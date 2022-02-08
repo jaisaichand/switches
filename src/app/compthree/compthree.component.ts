@@ -9,10 +9,13 @@ import { MainService } from '../main.service';
 export class CompthreeComponent implements OnInit {
 
   constructor(public service:MainService) { }
+  gun:String ;
+
 
   controls={iscomponeOn:false,iscomptwoOn:false};
 
   toggleOne(){
+    
     this.service.subj.next({comp:"compone",value:!this.controls.iscomponeOn});
   }
   toggleTwo(){

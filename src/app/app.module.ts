@@ -6,6 +6,8 @@ import { ComponeComponent } from './compone/compone.component';
 import { ComptwoComponent } from './comptwo/comptwo.component';
 import { ParentComponent } from './parent/parent.component';
 import { CompthreeComponent } from './compthree/compthree.component';
+import { FilteritComponent } from './filterit/filterit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { CompthreeComponent } from './compthree/compthree.component';
     ComponeComponent,
     ComptwoComponent,
     ParentComponent,
-    CompthreeComponent
+    CompthreeComponent,
+    FilteritComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
