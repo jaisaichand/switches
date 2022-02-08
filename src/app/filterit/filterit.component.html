@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="searchText" (keypress)="filterData($event)"  >
+<input type="text" [(ngModel)]="searchText" (keydown)="filterData($event)"  >
 <div class="container">
 <span class="hashtag" *ngFor="let dat of fitlteredFinalArray">{{dat.name}}</span>
 </div>

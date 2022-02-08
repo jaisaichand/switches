@@ -18,6 +18,12 @@ export class FilteritComponent implements OnInit {
 
 
   filterData(eve){
+    console.log(eve);
+    if(eve.code=="Backspace"){
+      this.searchText="";
+      this.fitlteredFinalArray = this.realData;
+    }
+    
     console.log(this.searchText);
     
     if(this.searchText==""){
