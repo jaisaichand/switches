@@ -13,27 +13,35 @@ export class FilteritComponent implements OnInit {
   }
 
   searchText="";
-  realData=[{id:1,name:"#jaisaichand"},{id:2,name:"#Spiderman"},{id:3,name:"#tarakechuthepikachu"},{id:4,name:"#saikiran"}];
-  fitlteredFinalArray=this.realData;
+  realData=[{id:1,name:"#jaisaichand"},{id:2,name:"#Spiderman"},{id:3,name:"#tarakechuthepikachu"},{id:4,name:"#saikiran"},{id:5,name:"#suskiran"},{id:6,name:"#samantha"}];
+  fitlteredFinalArray=[];
 
+  
 
   filterData(eve){
     console.log(eve);
-    if(eve.code=="Backspace"){
-      this.searchText="";
+    this.searchText = eve.target.value;
+    console.log(eve.target.value);
+    console.log(this.searchText);    
+    if(eve.code=="Digit3"){
+      
       this.fitlteredFinalArray = this.realData;
+      return;
     }
     
     console.log(this.searchText);
     
     if(this.searchText==""){
-      this.fitlteredFinalArray = this.realData;
+      this.fitlteredFinalArray = [];
     }else{
       this.fitlteredFinalArray = this.realData.filter((val)=>{
-        console.log(val);
+        
+        
         return val.name.includes(this.searchText);
       })
     }
   }
+
+  placeholderText="Write something";
 
 }
