@@ -1,5 +1,5 @@
 <input type="text" [value]="searchText" [placeholder]="placeholderText"  (input)="filterData($event)"  >
-<div class="container">
-<span class="hashtag" *ngFor="let dat of fitlteredFinalArray">{{dat.name}}</span>
+<div class="container" *ngIf="isHashText">
+<span class="hashtag" (click)="clickedHashtag(dat)" *ngFor="let dat of fitlteredFinalArray">{{dat.name}}</span>
 </div>
 <span>{{fitlteredFinalArray.length}}</span>
