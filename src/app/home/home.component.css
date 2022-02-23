@@ -1,0 +1,15 @@
+.page{
+    display: flex;
+}
+
+.part1{
+    flex: 1;
+}
+
+.green{
+    background: green;
+}
+
+.part2{
+    flex:2;
+}

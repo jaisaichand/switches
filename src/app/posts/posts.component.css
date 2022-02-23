@@ -1,0 +1,17 @@
+.likedOrNot{
+    background: white;
+    border: 1px solid blue;
+    width: 15px;
+    height: 25px;
+}
+
+.card{
+    width: 350px;
+    height: auto;
+    padding: 2rem;
+    border: 1px solid grey;
+}
+
+.liked{
+    background: yellow !important;
+}

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilteritComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +23,8 @@ export class FilteritComponent implements OnInit {
     console.log(eve);
     this.searchText = eve.target.value;
     console.log(eve.target.value);
-    console.log(this.searchText);    
+    console.log(this.searchText);
+    
     if(eve.data=="#"){
       
       this.fitlteredFinalArray = this.realData;

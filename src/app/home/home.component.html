@@ -1,0 +1,14 @@
+<div class="page">
+
+    <div  class="part1">
+
+        <div [class.green]="postdata.content==clicked.content" (click)="clicked=postdata" *ngFor="let postdata of postsData">
+            <app-posts (sendparent)="parentTriggered($event)" [postcontent]="postdata" ></app-posts>
+        </div>
+    </div>
+
+    <div *ngIf="clicked!=''" class="part2">
+     <app-rightone></app-rightone>    
+     <app-righttwo></app-righttwo>    
+    </div>
+</div>

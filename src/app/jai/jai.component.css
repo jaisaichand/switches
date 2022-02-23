@@ -1,0 +1,8 @@
+.child{
+  
+    width: 35vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
